@@ -59,24 +59,12 @@ web_server:
   local: true
 
 sensor:
-  - platform: template
-    name: "Template Sensor"
-    id: template_sens
-    update_interval: 1s
-
-  - platform: pid
-    name: "PID Climate Result"
-    type: RESULT
-
+#This is an example temperature sensor for the PID controller. Add yours and edit sensor: template_sens in the climate section
   - platform: homeassistant
-    entity_id: sensor.h_t_plus_living_room_zonata_temperature
+    entity_id: sensor.living_room_temperature
     name: "Living room temperature"
-    id: living_room_temperature
-    on_value:
-      then:
-        - sensor.template.publish:
-            id: template_sens
-            state: !lambda 'return id(living_room_temperature).state;'
+    id: replace_me
+    
 output:
   - platform: slow_pwm
     id: my_slow_pwm
@@ -88,7 +76,7 @@ climate:
   - platform: pid
     name: "PID Climate Controller"
     id: pid_controller
-    sensor: template_sens
+    sensor: replace_me
     default_target_temperature: 24°C
     heat_output: my_slow_pwm
     control_parameters:
