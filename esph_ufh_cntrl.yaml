@@ -64,11 +64,6 @@ sensor:
     id: template_sens
     update_interval: 1s
 
-  - platform: duty_cycle
-    pin: GPIO16
-    name: Duty Cycle Sensor
-    update_interval: 10s
-
   - platform: pid
     name: "PID Climate Result"
     type: RESULT
