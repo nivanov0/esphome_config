@@ -1,6 +1,4 @@
 substitutions:
-  system_name: esph-ufh-cntrl
-  friendly_name: "Underfloor heating PID and PWM controller"
   device_description: "This device is designed to control underfloor heating according to a preset temperature"
   log_level: DEBUG
   pwm_gpio_pin: GPIO15
