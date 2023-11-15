@@ -6,7 +6,6 @@ substitutions:
   pwm_gpio_pin: GPIO15
   pwm_gpio_period: 20min
 
-
 esphome:
   name: ${system_name}
   friendly_name: ${friendly_name}
@@ -26,17 +25,11 @@ logger:
 
 # Enable Home Assistant API
 api:
-  
-
 
 ota: 
-  
 
 wifi:
-  
-  # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    
 
 captive_portal:
 
