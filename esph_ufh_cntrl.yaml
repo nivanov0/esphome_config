@@ -48,7 +48,7 @@ sensor:
     
 output:
   - platform: slow_pwm
-    id: my_slow_pwm
+    id: valve_control
     pin: ${pwm_gpio_pin}
     period: ${pwm_gpio_period}
 
@@ -69,9 +69,9 @@ climate:
   - platform: pid
     name: "PID Climate Controller"
     id: pid_controller
-    sensor: replace_me
+    sensor: current_temperature
     default_target_temperature: 24°C
-    heat_output: my_slow_pwm
+    heat_output: valve_control
     control_parameters:
       kp: 1
       ki: 0
