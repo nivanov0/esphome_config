@@ -62,7 +62,8 @@ logger:
 # Enable Home Assistant API
 api:
   
-ota: 
+ota:
+  - platform: esphome
   
 dashboard_import:
   package_import_url: github://wildsystems-private-team/esphome_config/esph_ufh_cntrl.yaml@main
